@@ -1,0 +1,13 @@
+Q1: We did not use sudo because the script does not require privileged ports or admin permissions.
+
+Q2: lab.js reads plain.txt asynchronously and prints its contents after printing a message.
+
+Q3: Because readFile is asynchronous, the program continues and prints the next line before the file finishes loading.
+
+Q4: toString('utf8') converts the binary buffer into readable UTF-8 text.
+
+Q5: We don’t need to call toString('utf8') when serving files because the browser interprets the raw bytes correctly once Content-Type is set.
+
+Q6: Use a MIME-type lookup table so the server automatically selects the correct Content-Type for any file extension.
+
+Q7: Combine a static file server with route handlers. Frameworks like Express make this easy using express.static() and app.get().
